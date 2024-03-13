@@ -1,0 +1,121 @@
+/*OrdersManagement.css*/
+
+.orders-container {
+  padding: 20px;
+  background-color: #c7bda7;
+ 
+}
+
+.orders-container h1 {
+  font-size: 38px;  
+}
+
+.order-list ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+}
+
+.order-list ul li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgb(236, 230, 222);
+}
+
+.order-list ul li span {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.order-list ul li button {
+  margin-top: 5px;
+  margin-left: 15px;
+  background-color: black;
+  color: rgb(228, 228, 68);
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+.order-list ul li button:hover{
+  background-color: rgb(56, 52, 52);
+}
+.order-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2 
+
+}
+
+.order-details h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.order-details p {
+  margin-bottom: 10px;
+  font-weight: 450px;
+}
+.order-details button{
+  margin: 10px;
+  background-color: #007bff;
+  color:#fff;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 3px;
+  cursor: pointer;
+}
+.order-details button:hover{
+  background-color: #578ac1;
+}
+.order-details select {
+  margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .orders-container {
+    padding: 10px;
+  }
+
+  .orders-container h1 {
+    font-size: 32px;
+  }
+
+  .order-list ul {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .order-list ul li {
+    padding: 8px;
+  }
+
+  .order-details {
+    padding: 15px;
+  }
+
+  .order-details h2 {
+    font-size: 20px;
+  }
+
+  .order-details p {
+    margin-bottom: 8px;
+  }
+  .order-details button{
+    margin: 7px;
+    background-color: #007bff;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 6px; 
+  }
+  .order-details select {
+    margin-right: 5px;
+  }
+}
