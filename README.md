@@ -1,70 +1,102 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ERP System
 
-## Available Scripts
+Welcome to our ERP (Enterprise Resource Planning) System! This website is designed to streamline various business processes including project management, orders management, and calendar view of orders. Below you will find comprehensive instructions on how to run and use our front-end application.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Interacting with the Website](#interacting-with-the-website)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Introduction
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This README provides comprehensive instructions for the ERP System project. The ERP System is designed to streamline various aspects of business operations, including project management, order management, and calendar-based visualization of orders.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Dashboard**: Provides an overview of key metrics and features.
+- **Project Management Component**: Enables users to manage products effectively, including creating, editing, and deleting products.
+- **Orders Management Component**: Allows users to manage orders efficiently, including viewing order details, updating order status, and deleting orders.
+- **Orders Calendar View Component**: Provides a calendar-based visualization of orders, facilitating easy tracking and management.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To install and run the ERP System locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies by running `npm install`.
+4. Start the development server by running `npm start`.
+5. Open your web browser and navigate to `http://localhost:3000` to access the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+Once the ERP System is running locally, you can perform the following actions:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Navigate to the Dashboard to view key metrics and access different modules.
+- Use the ProductsManagement Component to add, edit, and delete products.
+- Utilize the OrdersManagement Component to manage orders, including updating status and deleting orders.
+- Explore the OrdersCalendarView Component to visualize orders on a calendar and indicate their statuses.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project follows a modular structure, with separate components for different functionalities:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **src/components**: Contains the main components of the application, including Dashboard, ProductsManagement, OrdersManagement, and OrdersCalendarView.
+- **src/styles**: Includes CSS files for styling the components.
+- **src/App.js**: Defines the routing and layout of the application.
+- **public/index.html**: The main HTML file that serves as the entry point to the application.
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The ERP System is built using the following technologies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React A JavaScript library for building user interfaces.
+- HTML/CSS: Standard web technologies for markup and styling.
+- JavaScript: The programming language used for application logic.
+- npm: The package manager for installing project dependencies.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Interacting with the Website
 
-### Analyzing the Bundle Size
+![Screenshot (766)](https://github.com/Althaf05/ERP_System/assets/105469451/ba73e1e8-24da-4c72-8d89-ce5a38645aa6)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Dashboard
+- The Dashboard provides an overview of key metrics and features.
+- It displays the total number of products and orders.
+- Navigation links are available to access different sections of the ERP System.
 
-### Making a Progressive Web App
+![Screenshot (767)](https://github.com/Althaf05/ERP_System/assets/105469451/4e7f9739-ec88-4965-b0f3-f12745ee2cf7)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Products Management
 
-### Advanced Configuration
+- Products Management allows users to add, edit, and delete products.
+- Users can input product details such as name, category, price, and stock quantity.
+- Products are displayed in a list with options to edit or delete each product.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+![Screenshot (768)](https://github.com/Althaf05/ERP_System/assets/105469451/1ff85f98-c037-4b4d-89d2-29bd4bc9340b)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Orders Management
 
-### `npm run build` fails to minify
+- Orders Management enables users to view and manage orders.
+- Each order is listed with details including customer name, order date, and status.
+- Users can edit the status of orders and delete orders as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot (769)](https://github.com/Althaf05/ERP_System/assets/105469451/8c9f75b6-9556-47fa-bac2-621754235574)
+
+### Orders Calendar View
+
+- Orders Calendar View provides a visual representation of orders based on delivery dates.
+- Users can click on specific dates to view orders scheduled for those dates.
+- Order status of "Pending" or "Processing" is visually represented with color-coded markers on the calendar.
+
+
+## Conclusion
+
+You are now ready to use the ERP System. you can seamlessly navigate through its diverse components, efficiently oversee product and order management, and utilize the calendar view to efficiently organize and track orders. 
