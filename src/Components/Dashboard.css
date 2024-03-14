@@ -11,13 +11,14 @@
   }
   
   .dashboard h1 {
-    font-size: 44px;
+    font-size: 48px;
     margin-bottom: 20px;
   }
   
   .dashboard p {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 20px;
+    font-weight: 400;
   }
   
   .dashboard ul {
@@ -57,7 +58,8 @@
     }
   
     .dashboard p {
-      font-size: 14px;
+      font-size: 20px;
+      font-weight: 400;
     }
   
     .dashboard ul li a {

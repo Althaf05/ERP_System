@@ -12,7 +12,6 @@ const initialOrders = [
   { id: 6, customerName: 'Althaf', deliveryDate: '2024-03-11', status: 'Delivered' },
   { id: 7, customerName: 'Mahammad', deliveryDate: '2024-03-09', status: 'Processing' },
   { id: 8, customerName: 'Sonia', deliveryDate: '2024-03-11', status: 'Delivered' },
-  { id: 9, customerName: 'vaishnavi', deliveryDate: '2024-03-10', status: 'Delivered' },
 ];
 
 const OrdersCalendarView = () => {
@@ -28,6 +27,7 @@ const OrdersCalendarView = () => {
     setSelectedDate(new Date(date)); 
   };
 
+  // Function to format date
   const formatDate = (date) => {
     const day = date.getDate();
     const month = date.getMonth() + 1;
@@ -35,7 +35,7 @@ const OrdersCalendarView = () => {
     return `${day}/${month}/${year}`;
   };
 
-
+  // Function to get the status class for a given date
   const getStatusClass = (date) => {
     const formattedDate = formatDate(new Date(date));
     const ordersForDate = orders.filter(order => formatDate(new Date(order.deliveryDate)) === formattedDate);
@@ -50,6 +50,7 @@ const OrdersCalendarView = () => {
     }
   };
 
+  // Function to generate calendar data
   const getCalendarData = () => {
     const year = selectedDate.getFullYear();
     const month = selectedDate.getMonth();
@@ -79,6 +80,8 @@ const OrdersCalendarView = () => {
     return calendarData;
   };
 
+
+   // Function to handle month change
   const handleMonthChange = (change) => {
     setSelectedDate(prevDate => {
       const newDate = new Date(prevDate);
@@ -87,6 +90,7 @@ const OrdersCalendarView = () => {
     });
   };
 
+  // Function to handle year change
   const handleYearChange = (change) => {
     setSelectedDate(prevDate => {
       const newDate = new Date(prevDate);

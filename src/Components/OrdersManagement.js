@@ -1,25 +1,39 @@
-import React, { useState } from 'react';
+// OrdersManagement.js
+import React, { useState, useEffect } from 'react';
 import './OrdersManagement.css';
 
+// Initial list of orders
 const initialOrders = [
-  { id: 1, customerName: 'Abhiram', orderDate: '11-03-2024', status: 'Delivered' },
-  { id: 2, customerName: 'Ajay', orderDate: '10-03-2024', status: 'Pending' },
-  { id: 3, customerName: 'Sai teja', orderDate: '09-03-2024', status: 'Processing' }
+  { id: 1, customerName: 'Ajay', orderDate: '02-03-2024', status: 'Pending' },
+  { id: 2, customerName: 'Abhiram', orderDate: '05-03-2024', status: 'Delivered' },
+  { id: 3, customerName: 'Rohan', orderDate: '03-03-2024', status: 'Processing' },
+  { id: 4, customerName: 'Rithwik', orderDate: '29-02-2024', status: 'Pending' },
+  { id: 5, customerName: 'Uday', orderDate: '06-03-2024', status: 'Processing' },
+  { id: 6, customerName: 'Althaf', orderDate: '03-03-2024', status: 'Delivered' },
+  { id: 7, customerName: 'Mahammad', orderDate: '05-03-2024', status: 'Processing' },
+  { id: 8, customerName: 'Sonia', orderDate: '01-03-2024', status: 'Delivered' },
 ];
 
-const OrdersManagement = () => {
+const OrdersManagement = ({ onOrderCountChange }) => {
+  // State variables
   const [orders, setOrders] = useState(initialOrders);
   const [selectedOrderId, setSelectedOrderId] = useState(null);
   const [editMode, setEditMode] = useState(false);
   const [updatedStatus, setUpdatedStatus] = useState('');
-
   const [statusOptions] = useState(['Pending', 'Processing', 'Delivered', 'Cancelled']);
 
+  // Function to calculate the total number of orders
+  const calculateOrderCount = () => {
+    return orders.length;
+  };
+
+  // Function to handle viewing order details
   const handleViewDetails = (orderId) => {
     setSelectedOrderId(orderId);
     setEditMode(false);
   };
 
+  // Function to handle updating order status
   const handleUpdateStatus = () => {
     if (selectedOrderId && updatedStatus) {
       const updatedOrders = orders.map(order =>
@@ -30,15 +44,23 @@ const OrdersManagement = () => {
     }
   };
 
+  // Function to handle deleting an order
   const handleDeleteOrder = (orderId) => {
     const updatedOrders = orders.filter(order => order.id !== orderId);
     setOrders(updatedOrders);
     setSelectedOrderId(null);
+    onOrderCountChange(calculateOrderCount()); // Notify parent component of updated order count
   };
 
+  // Function to handle changing status in edit mode
   const handleStatusChange = (e) => {
     setUpdatedStatus(e.target.value);
   };
+
+  // Effect to update order count whenever orders change
+  useEffect(() => {
+    onOrderCountChange(calculateOrderCount());
+  });
 
   return (
     <div className="orders-container">
